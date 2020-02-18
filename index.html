@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Custom code</title>
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel='stylesheet' href='css/foundation.css'>
+    <link rel="stylesheet" type="text/css" media="screen" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/grid.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css">
+
+    <!-- Bootstrap Css -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <!-- Bootstrap Datetimepicker Css -->
+    <link href="css/bootstrap-datetimepicker.css" rel="stylesheet">
+    <!-- custom css -->
+    <link href="css/style.css" rel="stylesheet" id="bootstrap-css">
+    <!-- main hand css -->
+    <link href="css/main.css" rel="stylesheet" id="bootstrap-css">
+
+    
+    <script src="js/jquery-1.7.min.js"></script>
+    <script src="js/mobilemenu.js"></script>
+    
+        <script type="text/javascript">
+  
+            var $_Tawk_API = {},
+                $_Tawk_LoadStart = new Date();
+            (function() {
+                var s1 = document.createElement("script"),
+                    s0 = document.getElementsByTagName("script")[0];
+                s1.async = true;
+                s1.src = 'https://embed.tawk.to/550733b5059b265f5423bb59/default';
+                s1.charset = 'UTF-8';
+                s1.setAttribute('crossorigin', '*');
+                s0.parentNode.insertBefore(s1, s0);
+
+            })();
+
+            function MM_swapImgRestore() { //v3.0
+                var i, x, a = document.MM_sr;
+                for (i = 0; a && i < a.length && (x = a[i]) && x.oSrc; i++) x.src = x.oSrc;
+            }
+
+            function MM_preloadImages() { //v3.0
+                var d = document;
+                if (d.images) {
+                    if (!d.MM_p) d.MM_p = new Array();
+                    var i, j = d.MM_p.length,
+                        a = MM_preloadImages.arguments;
+                    for (i = 0; i < a.length; i++)
+                        if (a[i].indexOf("#") != 0) {
+                            d.MM_p[j] = new Image;
+                            d.MM_p[j++].src = a[i];
+                        }
+                }
+            }
+
+            function MM_findObj(n, d) { //v4.01
+                var p, i, x;
+                if (!d) d = document;
+                if ((p = n.indexOf("?")) > 0 && parent.frames.length) {
+                    d = parent.frames[n.substring(p + 1)].document;
+                    n = n.substring(0, p);
+                }
+                if (!(x = d[n]) && d.all) x = d.all[n];
+                for (i = 0; !x && i < d.forms.length; i++) x = d.forms[i][n];
+                for (i = 0; !x && d.layers && i < d.layers.length; i++) x = MM_findObj(n, d.layers[i].document);
+                if (!x && d.getElementById) x = d.getElementById(n);
+                return x;
+            }
+
+            function MM_swapImage() { //v3.0
+                var i, j = 0,
+                    x, a = MM_swapImage.arguments;
+                document.MM_sr = new Array;
+                for (i = 0; i < (a.length - 2); i += 3)
+                    if ((x = MM_findObj(a[i])) != null) {
+                        document.MM_sr[j++] = x;
+                        if (!x.oSrc) x.oSrc = x.src;
+                        x.src = a[i + 2];
+                    }
+            }
+            //
+            -->
+        </script>
+            
+        <script>
+            (function(d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) return;
+                js = d.createElement(s);
+                js.id = id;
+                js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.12';
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+        </script>
+            
+        <script>
+                    (function(d, s, id) {
+                        var js, fjs = d.getElementsByTagName(s)[0];
+                        if (d.getElementById(id)) return;
+                        js = d.createElement(s);
+                        js.id = id;
+                        js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.12';
+                        fjs.parentNode.insertBefore(js, fjs);
+                    }(document, 'script', 'facebook-jssdk'));
+        </script>
+
+</head>
+
+<body>
+
+    <div class="container">
+        
+        <div class="d-form">    
+            <form role="form" action="" method="post" id="contactForm" enctype="multipart/form-data">
+                <div class="step-tab">
+                <input type="hidden" name="start" value="2020-02-18 00:04:13">
+                <div class="form-row">
+                    <div class="form-group col-md-4">
+                        <label for="fname">First Name</label><span class="required">*</span>
+                        <input type="text" class="form-control" name="fname" id="fname" placeholder="First Name" required="required">
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="mname">Middle Name</label><span class="required">*</span>
+                        <input type="text" class="form-control" name="mname" id="mname" placeholder="Middle Name" required="required">
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="lname">Last Name</label><span class="required">*</span>
+                        <input type="text" class="form-control" name="lname" id="lname" placeholder="Last Name" required="required">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputAddress">Address</label><span class="required">*</span>
+                    <input type="text" class="form-control" name="address" id="inputAddress" placeholder="1234 Main St" required="required">
+                </div>
+                <div class="form-row">
+                    
+                    <div class="form-group col-md-6">
+                        <label>State</label><span class="required">*</span>
+                        <select name="state"  class=" form-control" required="required">
+                        <option value="">Select State</option>
+                                <option value="Alaska">Alaska</option>
+                                <option value="Alabama">Alabama</option>
+                                <option value="Arkansas">Arkansas</option>
+                                <option value="Arizona">Arizona</option>
+                                <option value="California">California</option>
+                                <option value="Colorado">Colorado</option>
+                                <option value="Connecticut">Connecticut</option>
+                                <option value="Washington,D.C">Washington,D.C</option>
+                                <option value="Delaware">Delaware</option>
+                                <option value="Florida">Florida</option>
+                                <option value="Georgia">Georgia</option>
+                                <option value="Hawaii">Hawaii</option>
+                                <option value="Iowa">Iowa</option>
+                                <option value="Idaho">Idaho</option>
+                                <option value="Illinois">Illinois</option>
+                                <option value="Indiana">Indiana</option>
+                                <option value="Kansas">Kansas</option>
+                                <option value="Kentucky">Kentucky</option>
+                                <option value="Louisiana">Louisiana</option>
+                                <option value="Massachusetts">Massachusetts</option>
+                                <option value="Maryland">Maryland</option>
+                                <option value="Maine">Maine</option>
+                                <option value="Michigan">Michigan</option>
+                                <option value="Minnesota">Minnesota</option>
+                                <option value="Missouri">Missouri</option>
+                                <option value="Mississippi">Mississippi</option>
+                                <option value="Montana">Montana</option>
+                                <option value="North Carolina">North Carolina</option>
+                                <option value="North Dakota">North Dakota</option>
+                                <option value="Nebraska">Nebraska</option>
+                                <option value="New Hampshire">New Hampshire</option>
+                                <option value="New Jersey">New Jersey</option>
+                                <option value="New Mexico">New Mexico</option>
+                                <option value="Nevada">Nevada</option>
+                                <option value="New York">New York</option>
+                                <option value="Ohio">Ohio</option>
+                                <option value="Oklahoma">Oklahoma</option>
+                                <option value="Oregon">Oregon</option>
+                                <option value="Pennsylvania">Pennsylvania</option>
+                                <option value="Rhode Island">Rhode Island</option>
+                                <option value="South Carolina">South Carolina</option>
+                                <option value="South Dakota">South Dakota</option>
+                                <option value="Tennessee">Tennessee</option>
+                                <option value="Texas">Texas</option>
+                                <option value="Utah">Utah</option>
+                                <option value="Virginia">Virginia</option>
+                                <option value="Vermont">Vermont</option>
+                                <option value="Washington">Washington</option>
+                                <option value="Wisconsin">Wisconsin</option>
+                                <option value="West Virginia">West Virginia</option>
+                                <option value="Wyoming">Wyoming</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label>City</label><span class="required">*</span>
+                        <input name="city"  class=" form-control" required="required" />
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label>Zip Code </label><span class="required">*</span>
+                        <input type="text" name="zip" class="form-control" placeholder="Zip Code" required="required" />
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label>Social Security Number </label><span class="required">*</span>
+                        <input type="text"  pattern="[0-9]{9}" maxlength="9"  name="ssn" class="form-control" placeholder="Social Security Number" required="required" />
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label>Date of Birth </label><span class="required">*</span>
+                        <input type="text" name="dob" id="dob" class="form-control" placeholder="Date of Birth" required="required" />
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-3">
+                        <label style="font-size: 11px;">State, Military or Federal Issued ID Number</label><span class="required">*</span>
+                        <input type="text" name="federalidnumber" class="form-control" placeholder="State, Military or Federal Issued ID Number" required="required" />
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label>Issuing Body</label><span class="required">*</span>
+                        <select name="issuingbody" class="form-control" required="required">
+                            <option value="">Select Issuing Body</option>
+                            <option value="State ID">State ID</option>
+                            <option value="State Drivers Licence">State Drivers Licence</option>
+                            <option value="Military ID">Military ID</option>
+                            <option value="Passport">Passport</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label>Issuing Date</label><span class="required">*</span>
+                        <input type="text" name="issuingdate" id="issuingdate" class="form-control" placeholder="Issuing Date" required="required" />
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label>Exp. Date </label><span class="required">*</span>
+                        <input type="text" name="expdate" id="expdate" class="form-control" placeholder="Exp. Date" required="required" />
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label>Copy of State, Military or Federal Issued ID</label><span class="required">*</span>
+                        <input type="file" name="copyfederalissuedid" class="form-control" required="required" />
+                    </div>
+                    <div class="form-group col-md-6 disclosureauthorization-group required">
+                        <label>Disclosure & Authorization </label><span class="required">*</span>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" name="disclosureauthorization" value="I Agree and have read the Disclosure & Authorization || Terms of Service"> I Agree and have read the Disclosure & Authorization || Terms of Service
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row"><a href="#">Disclosure & Authorization</a> &nbsp;&nbsp;||&nbsp;&nbsp; <a href="#">Terms of Service</a></div>
+                </div>
+
+
+
+                <div class="step-tab">
+                    <div style="margin-bottom: 20px;background-color: #cabfbf;color: white;text-align: center;padding: 12px;font-size: 20px;">PAYMENT</div>
+
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label>Name on Card </label><span class="required">*</span>
+                            <input type="text" name="nameoncard" class="form-control" placeholder="Name on Card" required="required" />
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label>Credit Card Type </label><span class="required">*</span>
+                            <select name="cardtype" class="form-control" required="required">
+                                <option value="">Select Credit Card Type</option>
+                                <option value="Visa">Visa</option>
+                                <option value="Mastercard">Mastercard</option>
+                                <option value="American Express">American Express</option>
+                                <option value="Discover">Discover</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <label>Credit Card Number </label><span class="required">*</span>
+                            <input type="text" pattern="[0-9]{16}" maxlength="16"    name="cardnumber" class="form-control" placeholder="Credit Card Number" required="required" />
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label>Expiration Date (mmyy) </label><span class="required">*</span>
+                            <input type="text" name="cardexpiration" class="form-control" placeholder="Expiration Date (mmyy)" required="required" />
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label>CVV </label><span class="required">*</span>
+                            <input type="text" pattern="[0-9]{3}" maxlength="3"   name="cardcvv"  class="form-control" placeholder="CVV" required="required" />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="binputAddress">Billing Address</label><span class="required">*</span>
+                        <input type="text" class="form-control" name="billingaddress" id="binputAddress" placeholder="1234 Main St" required="required">
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-3">
+                            <label>City</label><span class="required">*</span>
+                            <input type="text" class="form-control" name="billingcity" placeholder="City" required="required">
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label>State</label><span class="required">*</span>
+                            <select name="billingstate" class="form-control" required="required">
+                                <option value="">Select State</option>
+                                <option value="Alaska">Alaska</option>
+                                <option value="Alabama">Alabama</option>
+                                <option value="Arkansas">Arkansas</option>
+                                <option value="Arizona">Arizona</option>
+                                <option value="California">California</option>
+                                <option value="Colorado">Colorado</option>
+                                <option value="Connecticut">Connecticut</option>
+                                <option value="Washington,D.C">Washington,D.C</option>
+                                <option value="Delaware">Delaware</option>
+                                <option value="Florida">Florida</option>
+                                <option value="Georgia">Georgia</option>
+                                <option value="Hawaii">Hawaii</option>
+                                <option value="Iowa">Iowa</option>
+                                <option value="Idaho">Idaho</option>
+                                <option value="Illinois">Illinois</option>
+                                <option value="Indiana">Indiana</option>
+                                <option value="Kansas">Kansas</option>
+                                <option value="Kentucky">Kentucky</option>
+                                <option value="Louisiana">Louisiana</option>
+                                <option value="Massachusetts">Massachusetts</option>
+                                <option value="Maryland">Maryland</option>
+                                <option value="Maine">Maine</option>
+                                <option value="Michigan">Michigan</option>
+                                <option value="Minnesota">Minnesota</option>
+                                <option value="Missouri">Missouri</option>
+                                <option value="Mississippi">Mississippi</option>
+                                <option value="Montana">Montana</option>
+                                <option value="North Carolina">North Carolina</option>
+                                <option value="North Dakota">North Dakota</option>
+                                <option value="Nebraska">Nebraska</option>
+                                <option value="New Hampshire">New Hampshire</option>
+                                <option value="New Jersey">New Jersey</option>
+                                <option value="New Mexico">New Mexico</option>
+                                <option value="Nevada">Nevada</option>
+                                <option value="New York">New York</option>
+                                <option value="Ohio">Ohio</option>
+                                <option value="Oklahoma">Oklahoma</option>
+                                <option value="Oregon">Oregon</option>
+                                <option value="Pennsylvania">Pennsylvania</option>
+                                <option value="Rhode Island">Rhode Island</option>
+                                <option value="South Carolina">South Carolina</option>
+                                <option value="South Dakota">South Dakota</option>
+                                <option value="Tennessee">Tennessee</option>
+                                <option value="Texas">Texas</option>
+                                <option value="Utah">Utah</option>
+                                <option value="Virginia">Virginia</option>
+                                <option value="Vermont">Vermont</option>
+                                <option value="Washington">Washington</option>
+                                <option value="Wisconsin">Wisconsin</option>
+                                <option value="West Virginia">West Virginia</option>
+                                <option value="Wyoming">Wyoming</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label>Zip Code </label><span class="required">*</span>
+                            <input type="text" name="billingzip" class="form-control" placeholder="Zip Code" required="required" />
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label>Email Address</label><span class="required">*</span>
+                            <input type="email" class="form-control" name="emailaddress" placeholder="Email Address" required="required">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Click to Approve ($32.99)</label><span class="required">*</span>
+                        <div class="checkbox">
+                            <label>
+                                <input type="radio" id="gridradio" value="Standard Background Screening"  name="clicktoapprove" required="required"> Standard Background Screening
+                            </label>
+                        </div>
+
+                    </div>
+                    <div style="text-align: right;"><a href="#">PRIVACY POLICY</a></div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="text-align: center;">
+                        <input type="hidden" name="amount" value="32.99">
+                        
+                    </div>
+                </div>
+                <div style="overflow:auto;">
+                <div style="float:right;">
+                    <button type="button" id="prevBtn" class="btn btn-info" onclick="nextPrev(-1)">Previous</button>
+                    <button type="button" id="nextBtn" class="btn btn-success"  onclick="nextPrev(1)">Next</button>
+                </div>
+                </div>
+                
+            </form>
+            
+        </div>
+
+    </div>
+
+
+<!-- jQuery -->
+<script src="js/jquery.min.js"></script>
+<!-- Bootstrap js -->
+<script src="js/bootstrap.min.js"></script>
+<!-- Moment js -->
+<script src="js/moment.min.js"></script>
+<!-- Bootstrap Datetimepicker js -->
+<script src="js/bootstrap-datetimepicker.min.js"></script>
+<script>
+    $("#dob").datetimepicker({
+        format: "YYYY-MM-DD",
+        ignoreReadonly: true,
+        allowInputToggle: true
+    });
+    $("#issuingdate").datetimepicker({
+        format: "YYYY-MM-DD",
+        ignoreReadonly: true,
+        allowInputToggle: true
+    });
+    $("#expdate").datetimepicker({
+        format: "YYYY-MM-DD",
+        ignoreReadonly: true,
+        allowInputToggle: true
+    });
+
+
+
+    function isEmail(email) {
+        var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+        return regex.test(email);
+    }
+
+    function isPhone(phone) {
+        var regex = /^[0-9\-\(\)\s]+/;
+        return regex.test(phone);
+    }
+</script>
+<!-- custom js -->
+<script src="js/countrystatecity.js"></script>
+<script>
+        var currentTab = 0; 
+        showTab(currentTab); 
+
+        function showTab(n) {
+          
+          var x = document.getElementsByClassName("step-tab");
+          x[n].style.display = "block";
+
+          if (n == 0) {
+            document.getElementById("prevBtn").style.display = "none";
+          } else {
+            document.getElementById("prevBtn").style.display = "inline";
+          }
+          if (n == (x.length - 1)) {
+            document.getElementById("nextBtn").innerHTML = "Submit";
+          } else {
+            document.getElementById("nextBtn").innerHTML = "Next";
+          }
+
+
+        }
+
+
+
+        function nextPrev(n) {
+
+          var x = document.getElementsByClassName("step-tab");
+
+          if (n == 1 && !validateForm()) return false;
+
+          x[currentTab].style.display = "none";
+
+          currentTab = currentTab + n;
+
+          if (currentTab >= x.length) {
+
+            document.getElementById("contactForm").submit();
+            return false;
+          }
+
+          showTab(currentTab);
+        }
+
+
+        function validateForm() {
+
+          var x, y, i, valid = true;
+          x = document.getElementsByClassName("step-tab");
+          y = x[currentTab].querySelectorAll('input,textarea,select');
+
+          
+          
+          for (i = 0; i < y.length; i++) {
+            
+            if (y[i].value == "") {
+                y[i].parentNode.classList.add("has-error");
+                valid = false;
+            }else{
+                y[i].parentNode.classList.remove("has-error");
+            }
+            if (y[i].type == "email") {
+                if (isEmail(y[i].value) == false) {
+                    valid = false;
+                    $(y[i]).closest(".form-group").addClass("has-error");
+                }
+            }
+            if (y[i].type == "checkbox") {
+                if (y[i].name == "disclosureauthorization" && $('.disclosureauthorization-group.required :checkbox:checked').length == 0) {
+                    valid = false;
+                    $(y[i]).closest(".form-group").addClass("has-error");
+                }
+            }
+            if (y[i].type == "tel") {
+                if (isPhone(y[i].value) == false) {
+                    valid = false;
+                    $(y[i]).closest(".form-group").addClass("has-error");
+                }
+            }
+            if (!y[i].validity.valid) {
+                valid = false;
+                $(y[i]).closest(".form-group").addClass("has-error");
+            }
+            
+          }
+
+
+
+
+          if (valid) {
+            document.getElementsByClassName("step-tab")[currentTab].className += " finish";
+          }
+          return valid; 
+        }
+</script>
+
+</body>
+</html>
